@@ -24,7 +24,41 @@ Restoring authentic human connections through decentralized social networking
 
 ## 💫 Overview
 
-Open Coral Network is a new form of decentralized social network (pro-social media) aimed at restoring essential human connections. Through the internet, we support the formation of meaningful local communities.
+Open Coral Network is a decentralized social network (pro-social media) designed to facilitate local community formation through the internet.
+
+### Why "Coral"?
+
+Our model is inspired by coral reef ecosystems:
+- Harmony with nature and integration with local regions
+- Attracting diverse "fish" (community members)
+- Creating a circular society
+- Nurturing community roots in local areas
+
+### Project Features
+
+1. **Diverse Professional Community**
+   - Programming, AI, IT
+   - Art, Music, Food
+   - Gathering of professionals and learners across fields
+   - Learning environment based on mutual respect
+
+2. **Quality Connections**
+   - Smart matching for meaningful encounters
+   - Building lasting relationships
+   - Project-based collaboration
+   - Rebuilding authentic human connections
+
+3. **Future-Oriented Initiatives**
+   - Integration with AR Urban Development
+   - AR Design for local cities
+   - High synergy with community values
+
+### Our Mission
+
+- Encourage worldwide participation
+- Provide services free of charge as an NPO
+- Restore authentic human connections
+- Create a global movement
 
 ## 🎯 Vision
 
@@ -55,21 +89,21 @@ While leveraging technology, we aim to build communities that value authentic hu
 <div align="center">
 
 ```ascii
-┌─────────────────┐   ┌─────────────────┐   ┌─────────────────┐
-│   Programming   │   │       AI        │   │       IT        │
-└────────┬────────┘   └────────┬────────┘   └────────┬────────┘
-         │                     │                      │
-         └──────────┬─────────┴──────────┬──────────┘
-                    │                     │
-            ┌──────┴──────┐       ┌──────┴──────┐
-            │     Art     │       │    Music    │
-            └──────┬──────┘       └──────┬──────┘
-                   │                     │
-                   └──────────┬─────────┘
-                             │
-                     ┌───────┴───────┐
-                     │     Food      │
-                     └───────────────┘
+┌────────────┐   ┌────────────┐   ┌────────────┐
+│ Programming│   │    AI      │   │    IT      │
+└─────┬──────┘   └─────┬──────┘   └─────┬──────┘
+      │                │                │      
+      └──────────┬─────┴─────────┬──────┘      
+                 │               │              
+           ┌─────┴────┐    ┌─────┴────┐        
+           │   Art    │    │  Music   │        
+           └─────┬────┘    └─────┬────┘        
+                 │               │              
+                 └───────┬───────┘              
+                         │                      
+                   ┌─────┴────┐                
+                   │   Food   │                
+                   └──────────┘                
 ```
 
 </div>
@@ -81,11 +115,19 @@ Modeled after coral reef ecosystems:
 <div align="center">
 
 ```ascii
-       Sustainable Relationship Building
-                    ↑
- Harmony with Nature → Integration with Locality
-                    ↓
-        Circular Society Formation
+┌────────────────────────────────────┐
+│    Sustainable Relationship        │
+│           Building                 │
+└───────────────┬────────────────────┘
+                ↑
+┌───────────────┼───────────────────┐
+│ Harmony with  → Integration with  │
+│   Nature         Locality         │
+└───────────────┼───────────────────┘
+                ↓
+┌────────────────────────────────────┐
+│    Circular Society Formation      │
+└────────────────────────────────────┘
 ```
 
 </div>
@@ -138,8 +180,8 @@ This project is licensed under the [MIT License](LICENSE).
 
 <div align="center">
 
-**[Back to Top](#)**
-
 This project aims to rebuild human connections and create a better society. We welcome your participation.
+
+**[Back to Top](#)**
 
 </div>
