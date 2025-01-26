@@ -88,20 +88,42 @@ graph TD
 
 ```mermaid
 graph TD
-    Tech{技術分野} --> Programming
-    Tech --> AI
-    Tech --> IT
+    subgraph Core[コア技術]
+        Tech{技術分野}
+        Programming[プログラミング]
+        AI[AI]
+        IT[IT]
+        
+        Tech --> Programming
+        Tech --> AI
+        Tech --> IT
+    end
     
-    Art{アート・文化} --> Art_
-    Art --> Music
+    subgraph Creative[クリエイティブ]
+        Art{アート・文化}
+        Art_[アート]
+        Music[音楽]
+        
+        Art --> Art_
+        Art --> Music
+    end
     
-    Programming & AI & IT --> Art_[Art]
-    Programming & AI & IT --> Music
+    subgraph Integration[統合]
+        Food[食文化]
+    end
     
+    Programming & AI & IT -.-> Art_
+    Programming & AI & IT -.-> Music
     Art_ & Music --> Food
     
     style Tech fill:#f9f,stroke:#333,stroke-width:2px
     style Art fill:#bbf,stroke:#333,stroke-width:2px
+    style Core fill:#f5f5f5,stroke:#666,stroke-width:1px
+    style Creative fill:#f0f8ff,stroke:#666,stroke-width:1px
+    style Integration fill:#f0fff0,stroke:#666,stroke-width:1px
+    
+    classDef default fill:#fff,stroke:#333,stroke-width:1px
+    classDef connection stroke-dasharray: 5 5
 ```
 
 ## 🌿 コミュニティの概念
