@@ -1,9 +1,12 @@
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 import { HeartIcon, ChatBubbleLeftIcon, ArrowPathRoundedSquareIcon } from '@heroicons/react/24/outline';
 import { HeartIcon as HeartIconSolid } from '@heroicons/react/24/solid';
 import { Post } from '../types/post';
 import { StoryGroup } from '../types/story';
+import { Project, mockProject } from '../types/project';
 import StoryPreview from './StoryPreview';
+import ProjectDetailsPopup from './ProjectDetailsPopup';
 
 const mockStories: StoryGroup[] = [
   {
@@ -98,6 +101,7 @@ interface PostListProps {
 }
 
 const PostList = ({ posts = mockPosts, stories = mockStories }: PostListProps) => {
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   return (
     <div className="space-y-6">
       {/* Stories row */}
@@ -117,6 +121,7 @@ const PostList = ({ posts = mockPosts, stories = mockStories }: PostListProps) =
       {posts.map((post) => (
         <motion.div
           key={post.id}
+          onClick={() => setSelectedProject(mockProject)}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           whileHover={{ scale: 1.01 }}
@@ -176,6 +181,13 @@ const PostList = ({ posts = mockPosts, stories = mockStories }: PostListProps) =
           </div>
         </motion.div>
       ))}
+
+      {/* Project Details Popup */}
+      <ProjectDetailsPopup
+        project={mockProject}
+        isOpen={selectedProject !== null}
+        onClose={() => setSelectedProject(null)}
+      />
     </div>
   );
 };
