@@ -60,13 +60,34 @@ const PostForm = () => {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: 投稿処理の実装
+    // TODO: 投稿処理の実装 (モックAPI呼び出し)
     console.log('投稿内容:', content);
-    setContent('');
-    setIsExpanded(false);
-    setSelectedImage(null);
+    
+    // モックAPI呼び出し (fetch APIを使用)
+    try {
+      const response = await fetch('/api/posts', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ content }),
+      });
+
+      if (response.ok) {
+        console.log('投稿成功!');
+        setContent('');
+        setIsExpanded(false);
+        setSelectedImage(null);
+      } else {
+        console.error('投稿失敗:', response.status);
+        // TODO: エラーハンドリング
+      }
+    } catch (error) {
+      console.error('投稿エラー:', error);
+      // TODO: エラーハンドリング
+    }
   };
 
   return (
