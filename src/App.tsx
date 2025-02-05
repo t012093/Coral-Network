@@ -257,7 +257,12 @@ function App() {
             {currentPage === 'account' && (
               <AccountPage onSettingsClick={() => setCurrentPage('account-settings')} />
             )}
-            {currentPage === 'account-settings' && <AccountSettingsPage />}
+            {currentPage === 'account-settings' && (
+              <AccountSettingsPage 
+                onLogout={() => setCurrentPage('post')}
+                onBack={() => setCurrentPage('account')}
+              />
+            )}
           </motion.div>
         </main>
 

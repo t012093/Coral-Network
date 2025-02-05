@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
-const AccountSettingsPage: React.FC = () => {
+interface AccountSettingsPageProps {
+  onLogout?: () => void;
+  onBack?: () => void;
+}
+
+const AccountSettingsPage: React.FC<AccountSettingsPageProps> = ({ onLogout = () => {}, onBack = () => {} }) => {
   const [currentTab, setCurrentTab] = useState<'profile' | 'password' | 'notifications' | 'privacy'>('profile');
   const [passwordForm, setPasswordForm] = useState({
     currentPassword: '',
@@ -29,8 +34,7 @@ const AccountSettingsPage: React.FC = () => {
   };
 
   const handleLogout = () => {
-    // ログアウト処理をここに実装
-    console.log('Logging out...');
+    onLogout();
   };
 
   return (
@@ -42,7 +46,19 @@ const AccountSettingsPage: React.FC = () => {
         className="bg-white/80 backdrop-blur-md rounded-2xl shadow-sm p-6"
       >
         <div className="flex justify-between items-center mb-6">
-          <h2 className="text-2xl font-bold">アカウント設定</h2>
+          <div className="flex items-center gap-4">
+            <motion.button
+              onClick={onBack}
+              className="text-gray-500 hover:text-gray-700"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </motion.button>
+            <h2 className="text-2xl font-bold">アカウント設定</h2>
+          </div>
           <motion.button
             onClick={handleLogout}
             className="px-4 py-2 text-red-500 hover:bg-red-50 rounded-xl text-sm font-medium"
