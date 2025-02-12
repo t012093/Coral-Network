@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   ContributionSummary,
-  ContributionLevel,
+  // ContributionLevel, // 後で使用する可能性あり
   CONTRIBUTION_LEVELS,
 } from '../types/contribution';
 

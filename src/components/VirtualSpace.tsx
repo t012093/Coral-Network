@@ -3,8 +3,8 @@ import {
   VirtualSpace as VirtualSpaceType,
   VirtualSpaceEvents,
   VirtualSpaceParticipant,
-  VirtualSpaceChat,
-  SharedMedia
+  // VirtualSpaceChat, // 後で使用する可能性あり
+  // SharedMedia // 後で使用する可能性あり
 } from '../types/virtualSpace';
 
 interface VirtualSpaceProps {
@@ -19,7 +19,7 @@ const VirtualSpace: React.FC<VirtualSpaceProps> = ({
   events
 }) => {
   const [chatMessage, setChatMessage] = useState('');
-  const [showParticipants, setShowParticipants] = useState(true);
+  const [showParticipants] = useState(true);
   const chatContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
